@@ -32,6 +32,7 @@ It support incremental static regeneration ISR and static site generation SSG.
 - It optmizes images on demand instead o build time, iamges are lazy loaded by default, so images outside the viewport are not loaded, images are awlays renderedin in a way to avoid cumulative layout shift
 
 - It is possible to decide the HTML meta data we want by using the `Head` component
+- It is possible to lead exernal JS into the page by using the `Script` component, which can also perform the loading using different strategy, `lazyOnload` loads s c ript on browser idle time, `onLoad` run after script has finished loading
 
 ## Others
 - Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages.
