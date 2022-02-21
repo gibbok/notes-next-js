@@ -55,7 +55,7 @@ It support incremental static regeneration ISR and static site generation SSG.
 - Hydratioan: React componmtes are initialized and the app become interactice
 
 Ther are two forms of pre-rendering:
-- Static Generation: pre-rendering method were HTML is generated at build time
+- Static Generation: pre-rendering method were HTML is generated at build time (with data or no data)
 - Server-side Rendering: pre-rendering method were HTML is generated on each request (default mode in dev mode)
 
 Next.js can support a hybrid method, let the developer choosewhich pre-rendering form to use for each page.
