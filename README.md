@@ -117,3 +117,5 @@ Nestjs support AMP althougt Google dropped AMP pages as a requirement
 
 Dynamic Imports for Components, used defer the loading of this component until it's required by the user which can help to improve First Input Delay (FID). 
 
+Next.js has built-in Automatic Webfont Optimization. By default, Next.js will automatically inline font CSS at build time, eliminating an extra round trip to fetch font declarations. This results in improvements to First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
+
