@@ -23,4 +23,4 @@ It support incremental static regeneration ISR and static site generation SSG.
 - A page i a React component exported from a file in the `pages` directory
 - Pages are assocaited with the route base of their file name, for instance `pages/index.js` is associated with `/` or `pages/posts/first.js` is assocaited with `/posts/first`
 - A component/page *must be sported as `default`*
-- Link between pages must be done using the `Link` Component from next/link
+- Link between pages must be done using the `Link` Component from next/link, this performes client-side navigation using JavaScript
