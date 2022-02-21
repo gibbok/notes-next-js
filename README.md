@@ -29,6 +29,7 @@ It support incremental static regeneration ISR and static site generation SSG.
 - `Image` component from Next.js performes, optimize image, image is responsive, only load iamge when in the viewport.
 - `Image` are served in WebP format when the browser support it
 - Automatic Image Optimization works with any image source. Even if the image is hosted by an external data source
+- It optmizes images on demand instead o build time, iamges are lazy loaded by default, so images outside the viewport are not loaded, images are awlays renderedin in a way to avoid cumulative layout shift
 
 ## Others
 - Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages.
