@@ -78,6 +78,12 @@ Notes:
 - in prod mode `getStaticProps` run at build time
 - `getStaticProps` can be only exported from a page
 
+### Server side rendering
+Fetch data at request time instead of build time, by  exporting  `getServerSideProps` instead of `getStaticProps` from a page.
+`getServerSideProps` parameter (context) contains request specific parameters.
+
+Time to first byte (TTFB) will be slower than `getStaticProps` because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
+
 ## Others
 
 ### Front Matter
