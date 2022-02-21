@@ -71,8 +71,9 @@ For pages pages which can be generated after fetching exernal data at build time
 
 #### Static generation with data using `getStaticProps`
 The `getStaticProps` is an synch function which runs at build time, in that function we can fetch external data and pass to the props of the component for that page. notes: in dev mode `getStaticProps` run on each request.
-
-
+Notes:
+- Next.js polyfills `fetch()` by default on both client and server.
+- `getStaticProps` only runs on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers.
 
 ## Others
 
