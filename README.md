@@ -67,13 +67,16 @@ Use Server-side Rendering for page where data is very frequently updated or chan
 For pages which requires no ethcing of external data, those are created at build time.
 
 #### Static generation with data fetching
-For pages pages which can be generated after fetching exernal data at build time
+For pages pages which can be generated after fetching exernal data at build time. It can be used for pre-render page ahead of a user's request.
 
 #### Static generation with data using `getStaticProps`
-The `getStaticProps` is an synch function which runs at build time, in that function we can fetch external data and pass to the props of the component for that page. notes: in dev mode `getStaticProps` run on each request.
+The `getStaticProps` is an synch function which runs at build time, in that function we can fetch external data and pass to the props of the component for that page.
 Notes:
 - Next.js polyfills `fetch()` by default on both client and server.
 - `getStaticProps` only runs on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers.
+- in dev mode `getStaticProps` run on each request
+- in prod mode `getStaticProps` run at build time
+- `getStaticProps` can be only exported from a page
 
 ## Others
 
