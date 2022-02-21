@@ -16,4 +16,9 @@ It support incremental static regeneration ISR and static site generation SSG.
 - Code splitting for last load
 - Client side routingn with optmimized fetching
 - Fash refresh
-- 
+
+
+## Core concepts
+
+- A page i a React component exported from a file in the `pages` directory
+- Pages are assocaited with the route base of their file name, for instance `pages/index.js` is associated with `/` or `pages/posts/first.js` is assocaited with `/posts/first`
