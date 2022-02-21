@@ -119,4 +119,4 @@ Dynamic Imports for Components, used defer the loading of this component until i
 
 Next.js has built-in Automatic Webfont Optimization. By default, Next.js will automatically inline font CSS at build time, eliminating an extra round trip to fetch font declarations. This results in improvements to First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
 
-Next.js provides a built-in Script component that optimizes loading for any third-party script, while giving developers the option to decide when to fetch and execute it.
+Next.js provides a built-in Script component that optimizes loading for any third-party script, while giving developers the option to decide when to fetch and execute it. use the `Script` which help to improve Largest Contentful Paint (LCP).
