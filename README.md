@@ -68,6 +68,7 @@ For pages which requires no ethcing of external data, those are created at build
 
 #### Static generation with data fetching
 For pages pages which can be generated after fetching exernal data at build time. It can be used for pre-render page ahead of a user's request.
+It is possible to by pass static generation for specific pages using Nexths Preview Mode
 
 #### Static generation with data using `getStaticProps`
 The `getStaticProps` is an synch function which runs at build time, in that function we can fetch external data and pass to the props of the component for that page.
