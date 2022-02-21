@@ -25,3 +25,6 @@ It support incremental static regeneration ISR and static site generation SSG.
 - A component/page *must be sported as `default`*
 - Link between pages must be done using the `Link` Component from next/link, this performes client-side navigation using JavaScript
 - Next.js does code splitting automatically, so each page only loads when necessary (fast loading), so each page become isolated so one error in one page should not affect other pates. In production code when the `Link` componet appear in the view port, Next.js autoamtically prefetch the code for the linked page in the background, for almost instand load.
+
+## Others
+- Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages.
