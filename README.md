@@ -3,7 +3,7 @@
 Next.js is an open-source development framework built on top of Node.js, it provides server-side rendering and generating of static websites.
 The Next.js framework utilizes Jamstack architecture.
 
-Next.js use Babel for transpilation and Webpack for bundling.
+Next.js use Babel for transpilation and Webpack for bundling (they are moving to Rust Compiler).
 It uses page-based routing and dynamic routing.
 
 It supports incremental static regeneration ISR and static site generation SSG.
