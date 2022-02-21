@@ -91,7 +91,10 @@ USe if you do not need pre-render the data, which consist of pre-render some sta
 Statically generate pages with paths that depend on external data, for instance defautls for a blog post `/posts/<id>,` where `<id>` is the name of markdown file present in a folder at build time.
 
 - In Nextjs pages that begin with [ and end with ] are dynamic routes in Next.js.
-- More on [feelback](https://nextjs.org/learn/basics/dynamic-routes/dynamic-routes-details) behaviour here
+- More on [feedback](https://nextjs.org/learn/basics/dynamic-routes/dynamic-routes-details) behaviour here
+feedback = false: 404 is returned it no result found
+feedback = true: pathe will be rendered, or nextjs will server fallback cersion of the path, in backround next will statically generate the request page on next request the pre-renedered content will be show
+feedback = blocking, it will apply server side rendering and cached for further requess
  
 ## Others
 
