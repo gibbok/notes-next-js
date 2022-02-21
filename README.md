@@ -37,6 +37,7 @@ It support incremental static regeneration ISR and static site generation SSG.
 - It support styled jsx, sas and CSS modules (the CSS file name must end with .module.css.). Nextjs Automatically Generates Unique Class Names
 - Nexths splitting feature works on CSS modules, to enure the niminal amount of CSS is loaded for each page and result in smaller bunderle sizes
 - Global styles should be added in `pages/_app.js` file
+- Next.js compiles CSS using PostCSS. To customize PostCSS config, you can create a top-level file called postcss.config.js
 
 ## Others
 - Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages.
