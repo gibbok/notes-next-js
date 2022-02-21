@@ -100,6 +100,10 @@ feedback = blocking, it will apply server side rendering and cached for further 
 ## API Routes
 API routes provide a solution to build your API endpoint with Next.js for instance in a new project you could build your entire API with API Routes.
  
+Do Not Fetch an API Route from getStaticProps or getStaticPaths instead use helper function, becasue both funcions are running at the server-side and never at the client side.
+
+Notes: The API Route code will not be part of your client bundle, so you can safely write server-side code which cannot be seen in the client.
+ 
 ## Others
 
 ### Front Matter
