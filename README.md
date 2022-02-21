@@ -114,3 +114,6 @@ Rendering strategies:
 https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
 
 Nestjs support AMP althougt Google dropped AMP pages as a requirement
+
+Dynamic Imports for Components, used defer the loading of this component until it's required by the user which can help to improve First Input Delay (FID). 
+
