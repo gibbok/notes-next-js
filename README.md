@@ -78,14 +78,14 @@ It is possible to bypass static generation for specific pages using Next.js usin
 The `getStaticProps` is a synch function that runs at build time, in that function we can fetch external data and pass it to the props of the component for that page. Notes:
 
 - Next.js polyfills `fetch()` by default on both client and server.
-- `getStaticProps` only run on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers.
+- `getStaticProps` only run on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers
 - in dev mode, `getStaticProps` run on each request
 - in prod mode, `getStaticProps` run at build time
 - `getStaticProps` can be only exported from a page
 
 ### Server-side rendering
 
-Fetch data at request time instead of build time, by exporting  `getServerSideProps` instead of `getStaticProps` from a page.
+Fetch data at request time instead of build time, by exporting `getServerSideProps` instead of `getStaticProps` from a page.
 `getServerSideProps` parameter (context) contains request specific parameters.
 
 Time to first byte (TTFB) will be slower than `getStaticProps` because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
@@ -98,7 +98,7 @@ Use if you do not need to pre-render the data, which consists of pre-rendering s
 
 Statically generate pages with paths that depend on external data, for instance, defaults for a blog post `/posts/<id>,` where `<id>` is the name of markdown file present in a folder at build time.
 
-- In Next.js pages that begin with `[` and end with `]` are dynamic routes in Next.js.
+- In Next.js pages that begin with `[` and end with `]` are dynamic routes in Next.js
 - More on [feedback](https://nextjs.org/learn/basics/dynamic-routes/dynamic-routes-details), summary of the behaviour:
 
 feedback = false: 404 is returned it no result found
@@ -121,10 +121,10 @@ Is a [metadata](https://jekyllrb.com/docs/front-matter) section used in MarkDown
 Rendering strategies:
 https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
 
-Next.js support AMP although Google dropped AMP pages as a requirement
+Next.js support AMP although Google dropped AMP pages as a requirement.
 
 Dynamic Imports for Components used defer the loading of this component until it's required by the user which can help to improve First Input Delay (FID). 
 
 Next.js has built-in Automatic Webfont Optimization. By default, Next.js will automatically inline font CSS at build time, eliminating an extra round trip to fetch font declarations. This results in improvements to First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
 
-Next.js provides a built-in Script component that optimizes loading for any third-party script while giving developers the option to decide when to fetch and execute it. use the `Script` which helps to improve Largest Contentful Paint (LCP).
+Next.js provides a built-in Script component that optimizes loading for any third-party script while giving developers the option to decide when to fetch and execute it. Use the `Script` which helps to improve Largest Contentful Paint (LCP).
