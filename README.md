@@ -63,6 +63,15 @@ Next.js can support a hybrid method, let the developer choosewhich pre-rendering
 Reccomandation: use Static Generation with or without data when posible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing)
 Use Server-side Rendering for page where data is very frequently updated or change on every request. it is possible to skip pre-rendering and use client-side JS for frequently updated data
 
-#### Statig generation without data fetching
+#### Static generation without data fetching
+For pages which requires no ethcing of external data, those are created at build time.
+
+#### Static generation with data fetching
+For pages pages which can be generated after fetching exernal data at build time
+
+#### Static generation with data using `getStaticProps`
+The `getStaticProps` is an synch function which runs at build time, in that function we can fetch external data and pass to the props of the component for that page. notes: in dev mode `getStaticProps` run on each request.
+
+
 
 ## Others
