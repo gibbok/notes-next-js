@@ -14,8 +14,7 @@ It supports incremental static regeneration ISR and static site generation SSG.
 - Pre rendering like static generation SSG and server-side rendering SSR are both supported for a per-page basis
 - Code splitting for the last load
 - Client-side routing with optimized fetching (pre-fetching)
-- Fast refresh
-
+- Fast refresh for development
 
 ## Core concepts
 
