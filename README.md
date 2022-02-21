@@ -47,4 +47,10 @@ It support incremental static regeneration ISR and static site generation SSG.
 - Global styles should be added in `pages/_app.js` file
 - Next.js compiles CSS using PostCSS. To customize PostCSS config, you can create a top-level file called postcss.config.js
 
+### Pre-rendering
+- It pre-render every page by default, so Nextjs generate HTML for each page in advanced instead of having it all done on the client side using Js
+- Pre-rendering can result in better performance and SEO
+- Each generated HTML is assocaited with a minimal JS code for what page, when the page load the browser laods it JS and make the page interactive (process is called hydfrataion)
+
+
 ## Others
