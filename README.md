@@ -87,8 +87,10 @@ Time to first byte (TTFB) will be slower than `getStaticProps` because the serve
 ### Client side rendering
 USe if you do not need pre-render the data, which consist of pre-render some static part of the page, when the page load usign JS to populate the remaining parts. Useful for project where the data is updated frequently, or private projets where SEO is not relevant.
 
-##  Dynamic URLs
+##  Dynamic URLs using dynamic routes
 Statically generate pages with paths that depend on external data, for instance defautls for a blog post `/posts/<id>,` where `<id>` is the name of markdown file present in a folder at build time.
+
+- In Nextjs pages that begin with [ and end with ] are dynamic routes in Next.js.
 
 ## Others
 
