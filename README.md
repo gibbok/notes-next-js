@@ -58,5 +58,9 @@ Ther are two forms of pre-rendering:
 - Static Generation: pre-rendering method were HTML is generated at build time
 - Server-side Rendering: pre-rendering method were HTML is generated on each request (default mode in dev mode)
 
+Next.js can support a hybrid method, let the developer choosewhich pre-rendering form to use for each page.
+
+Reccomandation: use Static Generation with or without data when posible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing)
+Use Server-side Rendering for page where data is very frequently updated or change on every request. it is possible to skip pre-rendering and use client-side JS for frequently updated data
 
 ## Others
