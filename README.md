@@ -63,4 +63,6 @@ Next.js can support a hybrid method, let the developer choosewhich pre-rendering
 Reccomandation: use Static Generation with or without data when posible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing)
 Use Server-side Rendering for page where data is very frequently updated or change on every request. it is possible to skip pre-rendering and use client-side JS for frequently updated data
 
+#### Statig generation without data fetching
+
 ## Others
