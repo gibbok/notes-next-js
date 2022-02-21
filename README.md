@@ -77,5 +77,5 @@ The `getStaticProps` is an synch function which runs at build time, in that func
 ## Others
 
 ### Front Matter
-Is a [https://jekyllrb.com/docs/front-matter/](metadata) section used in MarkDown file
+Is a [metadata](https://jekyllrb.com/docs/front-matter) section used in MarkDown file
 
