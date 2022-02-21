@@ -107,6 +107,8 @@ Notes: The API Route code will not be part of your client bundle, so you can saf
  
 ## Others
 
-### Front Matter
+Front Matter:
 Is a [metadata](https://jekyllrb.com/docs/front-matter) section used in MarkDown file
 
+Rendering strategies:
+https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
