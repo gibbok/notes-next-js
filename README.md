@@ -84,6 +84,9 @@ Fetch data at request time instead of build time, by  exporting  `getServerSideP
 
 Time to first byte (TTFB) will be slower than `getStaticProps` because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
 
+### Client side rendering
+USe if you do not need pre-render the data, which consist of pre-render some static part of the page, when the page load usign JS to populate the remaining parts. Useful for project where the data is updated frequently, or private projets where SEO is not relevant.
+
 ## Others
 
 ### Front Matter
