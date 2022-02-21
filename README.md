@@ -8,7 +8,6 @@ It uses page-based routing and dynamic routing.
 
 It supports incremental static regeneration ISR and static site generation SSG.
 
-
 ## Core features
 
 - Page based routing system with the support of dynamic routes
@@ -21,6 +20,7 @@ It supports incremental static regeneration ISR and static site generation SSG.
 ## Core concepts
 
 ### Pages
+
 - A page is a React component exported from a file in the `pages` directory
 - Pages are associated with the route base of their file name, for instance `pages/index.js` is associated with `/` or `pages/posts/first.js` is associated with `/posts/first`
 - A component/page must be sported as `default`
@@ -29,6 +29,7 @@ It supports incremental static regeneration ISR and static site generation SSG.
 - In production, when a `Link` component appears in the viewport, Next.js automatically prefetch the code for the linked page in the background, for an almost instant load.
 
 ### Images
+
 - `Image` component from Next.js performs, optimize image, images are responsive, images are loaded only when appearing in the viewport
 - `Image` is served in `WebP` format when the browser supports it, even if the source is in a different format by default
 - Automatic Image Optimization works with any image source. Even if the image is hosted by an external data source
@@ -36,10 +37,12 @@ It supports incremental static regeneration ISR and static site generation SSG.
 - Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages
 
 ### Meta
+
 - It is possible to decide which HTML metadata we want by using the `Head` component
 - It is possible to load external JS into the page by using the `Script` component, which can also perform the loading using different strategies, `lazyOnload` loads script on browser idle time, `onLoad` run after the script has finished loading
 
 ### Styling
+
 - It support styled jsx, sass, and CSS modules (the CSS file name must end with .module.css.)
 - It automatically generates Unique Class Names
 - It splitting feature works on CSS modules, to ensure the minimal amount of CSS is loaded for each page and result in smaller bundle sizes
@@ -59,45 +62,54 @@ Ther are two forms of pre-rendering:
 
 Next.js can support a hybrid method, letting the developer choose which pre-rendering form to use for each page.
 
-Recommendation: use Static Generation with or without data when possible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing)
-Use Server-side Rendering for the page where data is very frequently updated or changes on every request. it is possible to skip pre-rendering and use client-side JS for frequently updated data
+Recommendation:
+Use Static Generation with or without data when possible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing)
+Use Server-side Rendering for the page where data is very frequently updated or changes on every request.
+It is possible to skip pre-rendering and use client-side JS for frequently updated data
 
 #### Static generation without data fetching
+
 For pages that require no fetching of external data, those are created at build time.
 
 #### Static generation with data fetching
+
 For pages that can be generated after fetching external data at build time. It can be used for pre-render page ahead of a user's request.
 It is possible to bypass static generation for specific pages using Next.js Preview Mode
 
 #### Static generation with data using `getStaticProps`
-The `getStaticProps` is a synch function that runs at build time, in that function we can fetch external data and pass it to the props of the component for that page.
-Notes:
+
+The `getStaticProps` is a synch function that runs at build time, in that function we can fetch external data and pass it to the props of the component for that page. Notes:
+
 - Next.js polyfills `fetch()` by default on both client and server.
 - `getStaticProps` only run on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers.
-- in dev mode `getStaticProps` run on each request
+- in dev mode, `getStaticProps` run on each request
 - in prod mode, `getStaticProps` run at build time
 - `getStaticProps` can be only exported from a page
 
 ### Server-side rendering
+
 Fetch data at request time instead of build time, by exporting  `getServerSideProps` instead of `getStaticProps` from a page.
 `getServerSideProps` parameter (context) contains request specific parameters.
 
 Time to first byte (TTFB) will be slower than `getStaticProps` because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
 
 ### Client side rendering
+
 Use if you do not need to pre-render the data, which consists of pre-rendering some static part of the page when the page load using JS to populate the remaining parts. Useful for a project where the data is updated frequently, or private projects where SEO is not relevant.
 
 ##  Dynamic URLs using dynamic routes
+
 Statically generate pages with paths that depend on external data, for instance, defaults for a blog post `/posts/<id>,` where `<id>` is the name of markdown file present in a folder at build time.
 
 - In Next.js pages that begin with `[` and end with `]` are dynamic routes in Next.js.
-- More on [feedback](https://nextjs.org/learn/basics/dynamic-routes/dynamic-routes-details) behavior here
+- More on [feedback](https://nextjs.org/learn/basics/dynamic-routes/dynamic-routes-details), summary of the behaviour:
+
 feedback = false: 404 is returned it no result found
 feedback = true: path will be rendered, or Next.js will server fallback version of the path, in background next will statically generate the request page on next request the pre-rendered content will be shown
 feedback = blocking, it will apply server-side rendering and cached for further requests
  
- 
 ## API Routes
+
 API routes provide a solution to build your API endpoint with Next.js for instance in a new project you could build your entire API with API Routes.
  
 Do Not Fetch an API Route from `getStaticProps` or `getStaticPaths`` instead use helper functions, because both functions are running at the server-side and never at the client-side.
