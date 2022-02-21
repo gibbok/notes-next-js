@@ -56,7 +56,7 @@ It support incremental static regeneration ISR and static site generation SSG.
 
 Ther are two forms of pre-rendering:
 - Static Generation: pre-rendering method were HTML is generated at build time
-- Server-side Rendering: pre-rendering method were HTML is generated on each request
+- Server-side Rendering: pre-rendering method were HTML is generated on each request (default mode in dev mode)
 
 
 ## Others
