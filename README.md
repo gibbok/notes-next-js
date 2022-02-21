@@ -25,14 +25,14 @@ It supports incremental static regeneration ISR and static site generation SSG.
 - A component/page must be sported as `default`
 - Link between pages must be done using the `Link` Component from next/link, this performs client-side navigation using JavaScript
 - Next.js does code-splitting automatically, so each page only loads when necessary (fast loading), so each page become isolated so one error in one page should not affect other pages
-- In production, when a `Link` component appears in the viewport, Next.js automatically prefetch the code for the linked page in the background, for an almost instant load.
+- In production, when a `Link` component appears in the viewport, Next.js automatically prefetch the code for the linked page in the background, for an almost instant load
 
 ### Images
 
-- `Image` component from Next.js performs, optimize image, images are responsive, images are loaded only when appearing in the viewport
+- `Image` component from Next.js optimize images, images are responsive, images are loaded only when appearing in the viewport
 - `Image` is served in `WebP` format when the browser supports it, even if the source is in a different format by default
-- Automatic Image Optimization works with any image source. Even if the image is hosted by an external data source
-- It optimizes images on demand instead o build time, images are lazy-loaded by default, so images outside the viewport are not loaded, images are always rendered in a way to avoid cumulative layout shift
+- Automatic Image Optimization works with any image source, even if the image is hosted by an external data source
+- It optimizes images on demand instead o build time (buid time optimization), images are lazy-loaded by default, so images outside the viewport are not loaded, images are always rendered in a way to avoid cumulative layout shift
 - Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages
 
 ### Meta
