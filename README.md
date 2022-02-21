@@ -96,6 +96,10 @@ feedback = false: 404 is returned it no result found
 feedback = true: pathe will be rendered, or nextjs will server fallback cersion of the path, in backround next will statically generate the request page on next request the pre-renedered content will be show
 feedback = blocking, it will apply server side rendering and cached for further requess
  
+ 
+## API Routes
+API routes provide a solution to build your API endpoint with Next.js for instance in a new project you could build your entire API with API Routes.
+ 
 ## Others
 
 ### Front Matter
