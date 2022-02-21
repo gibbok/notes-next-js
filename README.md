@@ -49,10 +49,10 @@ It supports incremental static regeneration ISR and static site generation SSG.
 - Next.js compiles CSS using PostCSS. To customize PostCSS config, you can create a top-level file called postcss.config.js
 
 ### Pre-rendering
-- It pre-renders every page by default, so Next.js generate HTML for each page in advance instead of having it all done on the client-side using JS (SPA style)
+- Next.js pre-renders every page by default, so Next.js generate HTML for each page in advance instead of having it all done on the client-side using JS (SPA style)
 - Pre-rendering can result in better performance and SEO
 - Each generated HTML is associated with a minimal JS code for what page, when the page loads the browser loads it JS and makes the page interactive (the process is called hydratation).
-- Initial load: pre-rendered HTML created by next js is displayed
+- Initial load: pre-rendered HTML created by Next.js is displayed
 - Hydration: React components are initialized and the app becomes interactive
 
 Ther are two forms of pre-rendering:
@@ -62,9 +62,7 @@ Ther are two forms of pre-rendering:
 Next.js can support a hybrid method, letting the developer choose which pre-rendering form to use for each page.
 
 Recommendation:
-Use Static Generation with or without data when possible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing)
-Use Server-side Rendering for the page where data is very frequently updated or changes on every request.
-It is possible to skip pre-rendering and use client-side JS for frequently updated data
+Use Static Generation with or without data fetching when possible so it can be served from CDN (instance marketing pages, blog posts, doc, e-commerce product listing). Use Server-side Rendering for the page where data is very frequently updated or changes on every request. It is possible to skip pre-rendering and use client-side JS for frequently updated data.
 
 #### Static generation without data fetching
 
@@ -73,7 +71,7 @@ For pages that require no fetching of external data, those are created at build 
 #### Static generation with data fetching
 
 For pages that can be generated after fetching external data at build time. It can be used for pre-render page ahead of a user's request.
-It is possible to bypass static generation for specific pages using Next.js Preview Mode
+It is possible to bypass static generation for specific pages using Next.js using `Preview Mode`.
 
 #### Static generation with data using `getStaticProps`
 
