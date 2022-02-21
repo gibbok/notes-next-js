@@ -40,7 +40,7 @@ It support incremental static regeneration ISR and static site generation SSG.
 - It is possible to decide the HTML meta data we want by using the `Head` component
 - It is possible to load exernal JS into the page by using the `Script` component, which can also perform the loading using different strategy, `lazyOnload` loads s c ript on browser idle time, `onLoad` run after script has finished loading
 
-### Stlyinh
+### Styling
 - It support styled jsx, sass and CSS modules (the CSS file name must end with .module.css.)
 - It automatically generates Unique Class Names
 - It splitting feature works on CSS modules, to ensure the minimal amount of CSS is loaded for each page and result in smaller bunderle sizes
