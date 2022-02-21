@@ -112,3 +112,5 @@ Is a [metadata](https://jekyllrb.com/docs/front-matter) section used in MarkDown
 
 Rendering strategies:
 https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
+
+Nestjs support AMP althougt Google dropped AMP pages as a requirement
