@@ -34,7 +34,9 @@ It support incremental static regeneration ISR and static site generation SSG.
 - It is possible to decide the HTML meta data we want by using the `Head` component
 - It is possible to lead exernal JS into the page by using the `Script` component, which can also perform the loading using different strategy, `lazyOnload` loads s c ript on browser idle time, `onLoad` run after script has finished loading
 
-- It support styled jsx, sas and CSS modules (the CSS file name must end with .module.css.)
+- It support styled jsx, sas and CSS modules (the CSS file name must end with .module.css.). Nextjs Automatically Generates Unique Class Names
+- - Nexths splitting feature works on CSS modules, to enure the niminal amount of CSS is loaded for each page and result in smaller bunderle sizes
+
 
 ## Others
 - Next.js serves static assets under the top-level public directory, files inside public can be referenced from the root of the application similar to pages.
