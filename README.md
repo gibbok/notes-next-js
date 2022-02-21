@@ -54,5 +54,9 @@ It support incremental static regeneration ISR and static site generation SSG.
 - Initial load: pre-rendered HTML created by next js is displayed
 - Hydratioan: React componmtes are initialized and the app become interactice
 
+Ther are two forms of pre-rendering:
+- Static Generation: pre-rendering method were HTML is generated at build time
+- Server-side Rendering: pre-rendering method were HTML is generated on each request
+
 
 ## Others
