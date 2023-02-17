@@ -23,7 +23,7 @@ It supports incremental static regeneration ISR and static site generation SSG.
 
 - A page is a React component exported from a file in the `pages` directory
 - Pages are associated with the route base of their file name, for instance `pages/index.js` is associated with `/` or `pages/posts/first.js` is associated with `/posts/first`
-- A component/page must be sported as `default`
+- A component/page must be exported as `default`
 - Link between pages must be done using the `Link` Component from next/link, this performs client-side navigation using JavaScript
 - Next.js does code-splitting automatically, so each page only loads when necessary (fast loading), so each page become isolated so one error in one page should not affect other pages
 - In production, when a `Link` component appears in the viewport, Next.js automatically prefetch the code for the linked page in the background, for an almost instant load
