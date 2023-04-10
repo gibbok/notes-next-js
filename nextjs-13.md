@@ -72,3 +72,8 @@ When navigating between sibling route segments, Next.js will only fetch and rend
 On navigation, data is fetched and React renders the components server-side. The output from the server are special instructions (not HTML or JSON) for React on the client to update the DOM. These instructions hold the result of the rendered Server Components meaning that no JavaScript for that component has to be loaded in the browser to render the result.
 
 This is in contrast to the current default of Client components, which the component JavaScript to the browser to be rendered client-side.
+Notes: The router leverages a new streaming protocol so that rendering can start before all data is loaded.
+
+As users navigate around an app, the router will store the result of the React Server Component payload in an in-memory client-side cache. The cache is split by route segments which allows invalidation at any level and ensures consistency across concurrent renders. This means that for certain cases, the cache of a previously fetched segment can be re-used.
+
+The new router will use Suspense for instant loading states and default skeletons. This means loading UI can be shown immediately while the content for the new segment loads. The new content is then swapped in once rendering on the server is complete.
