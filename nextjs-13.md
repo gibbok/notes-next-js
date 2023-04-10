@@ -40,6 +40,7 @@ You can create a root layout that will apply to all routes of your application b
 
 You can also create a layout that only applies to a part of your application by adding a layout.js file inside a specific folder.
 
+![nested-layouts-example](https://user-images.githubusercontent.com/17195702/230880663-8cef2f48-cffd-416a-9289-c4ead191e45c.png)
 
 
 
