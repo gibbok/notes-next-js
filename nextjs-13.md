@@ -52,7 +52,7 @@ A page is UI that is unique to a route segment. You can create a page by adding 
 Notes:
 NextJs allow to have incremntal static generation ISR, this mean deploy only page changes without rebuild the complete website.
 
-Data fetching
+### Data fetching
 It will be possible to fetch data inside multiple segments in a route. This is different from the pages directory, where data fetching was limited to the page-level.
 Data fetching can be performed in the layout.
 You can also fetch data in multiple segments of a route. For example, a layout that fetches data can also wrap a page that fetches its own data.
@@ -61,4 +61,4 @@ Statically generated routes improve this further, as the client navigation reuse
 
 (getServerSideProps and getStaticProps) can only be used in Server Components in the app f
 
-
+Next.js will eagerly initiate data fetches in parallel to minimize waterfalls. With parallel fetching, however, each segment can eagerly start data fetching at the same time.
