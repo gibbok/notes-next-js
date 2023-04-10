@@ -40,9 +40,11 @@ You can create a root layout that will apply to all routes of your application b
 
 You can also create a layout that only applies to a part of your application by adding a layout.js file inside a specific folder.
 
-![nested-layouts-example](https://user-images.githubusercontent.com/17195702/230880663-8cef2f48-cffd-416a-9289-c4ead191e45c.png)
+## Page
 
+A page is UI that is unique to a route segment. You can create a page by adding a page.js file inside a folder.
 
+![page-example](https://user-images.githubusercontent.com/17195702/230880845-0d43a01c-96d1-455b-bb6a-96c670bf2c1a.png)
 
 Notes:
 NextJs allow to have incremntal static generation ISR, this mean deploy only page changes without rebuild the complete website.
