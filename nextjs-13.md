@@ -82,6 +82,8 @@ As users navigate around an app, the router will store the result of the React S
 
 The new router will use Suspense for instant loading states and default skeletons. This means loading UI can be shown immediately while the content for the new segment loads. The new content is then swapped in once rendering on the server is complete.
 
+https://beta.nextjs.org/docs/data-fetching/fundamentals#fetching-data-with-server-components
+
 ## Templates
 
 Templates are similar to Layouts in that they wrap each child Layout or Page.
