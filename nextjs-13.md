@@ -97,3 +97,30 @@ There may be cases where you need to mount and unmount shared UI, and templates 
 - Features that rely on useEffect (e.g logging page views) and useState
 
 With this convention, you can share templates across routes that create a new instance on navigation. This means DOM elements will be recreated, state will not be preserved, and effects will be re-synchronized.
+
+## Server Components
+n order to  reducing the amount of JavaScript sent to the client, enabling faster initial page loads.
+
+When a route is loaded, the Next.js and React runtime will be loaded, which is cacheable and predictable in size. This runtime does not increase in size as your application grows. Further, the runtime is asynch
+
+## streaming
+The app/ directory introduces the ability to progressively render and incrementally stream rendered units of the UI to the client.
+
+
+## Trubopack 
+Based on Rust.
+700x faster updates than Webpack
+4x faster cold starts than Webpack
+
+## next/image
+
+ allowing you to easily display images without layout shift and optimize files on-demand for increased performance.
+
+
+## @next/font
+Brand new file system 
+
+- Automatically optimizes your fonts, including custom fonts
+- Removes external network requests for improved privacy and performance
+- Built-in automatic self-hosting for any font file
+- Zero layout shift automatically using the CSS size-adjust property
