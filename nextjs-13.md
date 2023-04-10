@@ -62,3 +62,7 @@ Statically generated routes improve this further, as the client navigation reuse
 (getServerSideProps and getStaticProps) can only be used in Server Components in the app f
 
 Next.js will eagerly initiate data fetches in parallel to minimize waterfalls. With parallel fetching, however, each segment can eagerly start data fetching at the same time.
+
+Since rendering may depend on Context, rendering for each segment will start once its data has been fetched and its parent has finished rendering.
+
+In the future, with Suspense, rendering could also start immediately - even if the data is not completely loaded. If the data is read before it's available, Suspense will be triggered. React will start rendering Server Components optimistically, before the requests have completed, and will slot in the result as the requests resolve.
