@@ -96,3 +96,4 @@ There may be cases where you need to mount and unmount shared UI, and templates 
 - Enter/exit animations using CSS or animation libraries
 - Features that rely on useEffect (e.g logging page views) and useState
 
+With this convention, you can share templates across routes that create a new instance on navigation. This means DOM elements will be recreated, state will not be preserved, and effects will be re-synchronized.
