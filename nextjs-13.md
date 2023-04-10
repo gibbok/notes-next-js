@@ -84,6 +84,10 @@ The new router will use Suspense for instant loading states and default skeleton
 
 https://beta.nextjs.org/docs/data-fetching/fundamentals#fetching-data-with-server-components
 
+
+![page-example](https://user-images.githubusercontent.com/17195702/230897313-5b729137-c96f-4611-b9fd-dbdb56033058.png)
+
+
 ## Templates
 
 Templates are similar to Layouts in that they wrap each child Layout or Page.
