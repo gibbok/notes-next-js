@@ -82,3 +82,17 @@ As users navigate around an app, the router will store the result of the React S
 The new router will use Suspense for instant loading states and default skeletons. This means loading UI can be shown immediately while the content for the new segment loads. The new content is then swapped in once rendering on the server is complete.
 
 Errors inside a layout.js file in the same segment as an error.js will not be caught as the automatic error boundary wraps the children of a layout and not the layout itself.
+
+## Templates
+Templates are similar to Layouts in that they wrap each child Layout or Page.
+
+Unlike Layouts that persist across routes and maintain state, templates create a new instance for each of their children
+Note: We recommend using Layouts unless you have a specific reason to use a Template.
+
+A template can be defined by exporting a default React component from a template.js file
+
+There may be cases where you need to mount and unmount shared UI, and templates would be a more suitable option. For example:
+
+- Enter/exit animations using CSS or animation libraries
+- Features that rely on useEffect (e.g logging page views) and useState
+
