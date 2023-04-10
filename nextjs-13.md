@@ -124,3 +124,9 @@ Brand new file system
 - Removes external network requests for improved privacy and performance
 - Built-in automatic self-hosting for any font file
 - Zero layout shift automatically using the CSS size-adjust property
+
+conveniently use all Google Fonts with performance and privacy in mind. CSS and font files are downloaded at build time and self-hosted with the rest of your static assets. No requests are sent to Google by the browser.
+
+## OG Image Generation (Social cards)
+We've created a new library @vercel/og that works seamlessly with Next.js to generate dynamic social cards. 5x faster
+
