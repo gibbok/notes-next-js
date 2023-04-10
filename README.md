@@ -129,3 +129,7 @@ Dynamic Imports for Components used defer the loading of this component until it
 Next.js has built-in Automatic Webfont Optimization. By default, Next.js will automatically inline font CSS at build time, eliminating an extra round trip to fetch font declarations. This results in improvements to First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
 
 Next.js provides a built-in Script component that optimizes loading for any third-party script while giving developers the option to decide when to fetch and execute it. Use the `Script` which helps to improve Largest Contentful Paint (LCP).
+
+> Progressive Rendering is the technique of sequentially rendering portions of a webpage in the server and streaming it to the client in parts without waiting for the whole page to rendered.
+
+https://medium.com/the-thinkmill/progressive-rendering-the-key-to-faster-web-ebfbbece41a4
