@@ -66,3 +66,9 @@ Next.js will eagerly initiate data fetches in parallel to minimize waterfalls. W
 Since rendering may depend on Context, rendering for each segment will start once its data has been fetched and its parent has finished rendering.
 
 In the future, with Suspense, rendering could also start immediately - even if the data is not completely loaded. If the data is read before it's available, Suspense will be triggered. React will start rendering Server Components optimistically, before the requests have completed, and will slot in the result as the requests resolve.
+
+When navigating between sibling route segments, Next.js will only fetch and render from that segment down. It will not need to re-fetch or re-render anything above.
+
+On navigation, data is fetched and React renders the components server-side. The output from the server are special instructions (not HTML or JSON) for React on the client to update the DOM. These instructions hold the result of the rendered Server Components meaning that no JavaScript for that component has to be loaded in the browser to render the result.
+
+This is in contrast to the current default of Client components, which the component JavaScript to the browser to be rendered client-side.
