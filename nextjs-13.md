@@ -87,10 +87,11 @@ https://beta.nextjs.org/docs/data-fetching/fundamentals#fetching-data-with-serve
 
 ![page-example](https://user-images.githubusercontent.com/17195702/230897313-5b729137-c96f-4611-b9fd-dbdb56033058.png)
 
-
 ![deduplicated-fetch-requests](https://user-images.githubusercontent.com/17195702/230897539-2b2156b6-ed7c-491c-b3f2-1f6e04ee23db.png)
 
 https://beta.nextjs.org/docs/data-fetching/fetching#data-fetching-patterns
+
+https://beta.nextjs.org/docs/api-reference/fetch
 
 ## Templates
 
