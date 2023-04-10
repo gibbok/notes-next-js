@@ -22,16 +22,26 @@ This allows you to colocate your own project files (UI components, test files, s
 
 https://nextjs.org/blog/layouts-rfc
 
-## layout
+## Layout
+
 A layout is UI that is shared between route segments in a subtree. Layouts do not affect URL paths and do not re-render (React state is preserved) when a user navigates between sibling segments.
+Notes: layouut are nested by default.
 
 There are 2 types of layouts:
 
-Root layout: Applies to all routes
-Regular layout: Applies to specific routes
+- Root layout: Applies to all routes
+- Regular layout: Applies to specific routes
 
-Root Layout
+### Root Layout
+
 You can create a root layout that will apply to all routes of your application by adding a layout.js file inside the app folder.
+
+### Regular Layouts
+
+You can also create a layout that only applies to a part of your application by adding a layout.js file inside a specific folder.
+
+
+
 
 Notes:
 NextJs allow to have incremntal static generation ISR, this mean deploy only page changes without rebuild the complete website.
