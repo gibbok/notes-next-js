@@ -80,3 +80,5 @@ Notes: The router leverages a new streaming protocol so that rendering can start
 As users navigate around an app, the router will store the result of the React Server Component payload in an in-memory client-side cache. The cache is split by route segments which allows invalidation at any level and ensures consistency across concurrent renders. This means that for certain cases, the cache of a previously fetched segment can be re-used.
 
 The new router will use Suspense for instant loading states and default skeletons. This means loading UI can be shown immediately while the content for the new segment loads. The new content is then swapped in once rendering on the server is complete.
+
+Errors inside a layout.js file in the same segment as an error.js will not be caught as the automatic error boundary wraps the children of a layout and not the layout itself.
