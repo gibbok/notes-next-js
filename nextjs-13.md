@@ -32,6 +32,9 @@ There are 2 types of layouts:
 - Root layout: Applies to all routes
 - Regular layout: Applies to specific routes
 
+
+Files inside app will be rendered on the server as React Server Components.
+
 ### Root Layout
 
 You can create a root layout that will apply to all routes of your application by adding a layout.js file inside the app folder.
@@ -48,3 +51,8 @@ A page is UI that is unique to a route segment. You can create a page by adding 
 
 Notes:
 NextJs allow to have incremntal static generation ISR, this mean deploy only page changes without rebuild the complete website.
+
+Data fetching
+It will be possible to fetch data inside multiple segments in a route. This is different from the pages directory, where data fetching was limited to the page-level.
+
+
