@@ -54,5 +54,11 @@ NextJs allow to have incremntal static generation ISR, this mean deploy only pag
 
 Data fetching
 It will be possible to fetch data inside multiple segments in a route. This is different from the pages directory, where data fetching was limited to the page-level.
+Data fetching can be performed in the layout.
+You can also fetch data in multiple segments of a route. For example, a layout that fetches data can also wrap a page that fetches its own data.
+
+Statically generated routes improve this further, as the client navigation reuses the cache (Server Components data) and doesn't recompute work, leading to less CPU time because you're rendering a snapshot of the Server Components.
+
+(getServerSideProps and getStaticProps) can only be used in Server Components in the app f
 
 
