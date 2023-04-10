@@ -32,6 +32,9 @@ There are 2 types of layouts:
 - Root layout: Applies to all routes
 - Regular layout: Applies to specific routes
 
+## Error
+You'll be able to create an Error Boundary that will catch errors within a subtree by adding a error.js file and default exporting a React Component.
+
 
 Files inside app will be rendered on the server as React Server Components.
 
