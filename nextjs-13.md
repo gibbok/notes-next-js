@@ -105,6 +105,8 @@ In order to  reducing the amount of JavaScript sent to the client, enabling fast
 
 When a route is loaded, the Next.js and React runtime will be loaded, which is cacheable and predictable in size. This runtime does not increase in size as your application grows. Further, the runtime is asynch
 
+https://beta.nextjs.org/docs/rendering/server-and-client-components
+
 ### Streaming
 
 The app/ directory introduces the ability to progressively render and incrementally stream rendered units of the UI to the client.
