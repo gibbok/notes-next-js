@@ -114,6 +114,35 @@ Do Not Fetch an API Route from `getStaticProps` instead use helper functions, be
 
 Notes: The API Route code will not be part of your client bundle, so you can safely write server-side code which cannot be seen in the client.
  
+ 
+## ISR Incremental Static Regeneration
+
+Next.js allows you to create or update static pages after you’ve built your site.
+
+Incremental Static Regeneration (ISR) enables you to use static-generation on a per-page basis, without needing to rebuild the entire site. With ISR, you can retain the benefits of static while scaling to millions of pages.
+
+To use ISR, add the revalidate prop to getStaticProps:
+
+Next.js will attempt to re-generate the page When a request comes in At most once every 10 seconds
+
+- When a request is made to a page that was pre-rendered at build time, it will initially show the cached page.
+- Any requests to the page after the initial request and before 10 seconds are also cached and instantaneous.
+- After the 10-second window, the next request will still show the cached (stale) page
+- Next.js triggers a regeneration of the page in the background.
+- Once the page generates successfully, Next.js will invalidate the cache and show the updated page. If the background regeneration fails, the old page would still be unaltered.
+- When a request is made to a path that hasn’t been generated, Next.js will server-render the page on the first request. Future requests will serve the static file from the cache. 
+
+Next.js supports On-Demand Incremental Static Regeneration to manually purge the Next.js cache for a specific page. This makes it easier to update your site when:
+
+- Content from your headless CMS is created or updated
+- Ecommerce metadata changes (price, description, category, reviews, etc.)
+
+To invalidate the cache we can use a token on a dedicated revalidation API Route which can be triggered manually or using a webhook.
+
+https://<your-site.com>/api/revalidate?secret=<token>
+
+ISR works out of the box with NextJS hosting otherwise we can set it up on our own premises.
+
 ## Others
 
 Front Matter:
